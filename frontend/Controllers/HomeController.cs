@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using frontend.Models;
+using System.Net.Http;
 
 namespace frontend.Controllers
 {
@@ -18,11 +19,12 @@ namespace frontend.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var serviceThree = "https://servicethree/merge";
-            var serviceThreeResponseCall = await new HttpClient().GetAsStringAsync(serviceThree);
-            return View(serviceThree);
+            //var serviceThree = "http://servicethree/merge";
+            var serviceThree = "https://localhost:44361/merge";
+            var serviceThreeResponseCall = await new HttpClient().GetStringAsync(serviceThree);
+            return View(serviceThreeResponseCall);
         }
     }
 }

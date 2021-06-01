@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  frontend:
+    image: ${DOCKER_REGISTRY-}frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+
+  serviceone:
+    image: ${DOCKER_REGISTRY-}serviceone
+    build:
+      context: .
+      dockerfile: serviceone/Dockerfile
+
+  servicetwo:
+    image: ${DOCKER_REGISTRY-}servicetwo
+    build:
+      context: .
+      dockerfile: servicetwo/Dockerfile
+
+  servicethree:
+    image: ${DOCKER_REGISTRY-}servicethree
+    build:
+      context: .
+      dockerfile: servicethree/Dockerfile
