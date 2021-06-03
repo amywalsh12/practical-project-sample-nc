@@ -1,39 +1,39 @@
-version: '3.8'
+version: '3.4'
 
 services:
   frontend:
+    image: daraoladapo/practical-frontend
     build:
       context: .
       dockerfile: frontend/Dockerfile
-    image: daraoladapo/practical-frontend
-    ports:
-      - "7994:80"
+    # ports:
+    #   - "7994:80"
     depends_on:
       - merge-service
 
   numbers-service:
+    image: daraoladapo/practical-serviceone
     build:
       context: .
       dockerfile: serviceone/Dockerfile
-    image: daraoladapo/practical-serviceone
-    ports:
-      - "7991:80"
+    # ports:
+    #   - "7991:80"
 
   letters-service:
+    image: daraoladapo/practical-servicetwo
     build:
       context: .
       dockerfile: servicetwo/Dockerfile
-    image: daraoladapo/practical-servicetwo
-    ports:
-      - "7992:80"
+    # ports:
+    #   - "7992:80"
 
   merge-service:
+    image: daraoladapo/practical-servicethree
     build:
       context: .
       dockerfile: servicethree/Dockerfile
-    image: daraoladapo/practical-servicethree
-    ports:
-      - "7993:80"
+    # ports:
+    #   - "7993:80"
     depends_on:
       - numbers-service
       - letters-service

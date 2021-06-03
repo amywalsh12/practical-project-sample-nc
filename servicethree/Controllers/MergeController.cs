@@ -15,10 +15,10 @@ namespace servicethree.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var serviceOne = "http://numbers-service:7991/numbers";
-            var serviceOneResponseCall = await new HttpClient().GetStringAsync(serviceOne);
-            var serviceTwo = "http://letters-service:7992/letters";
-            var serviceTwoResponseCall = await new HttpClient().GetStringAsync(serviceTwo);
+            var numbersService = "https://numbers-service/numbers";
+            var serviceOneResponseCall = await new HttpClient().GetStringAsync(numbersService);
+            var lettersService = "https://letters-service/letters";
+            var serviceTwoResponseCall = await new HttpClient().GetStringAsync(lettersService);
             var mergedResponse = $"{serviceOneResponseCall}{serviceTwoResponseCall}";
             return Ok(mergedResponse);
         }
