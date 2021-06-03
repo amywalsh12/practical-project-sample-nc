@@ -15,11 +15,9 @@ namespace servicethree.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            //var serviceOne = "http://serviceone/numbers";
-            var serviceOne = "https://localhost:44397/numbers";
+            var serviceOne = "http://numbers-service:7991/numbers";
             var serviceOneResponseCall = await new HttpClient().GetStringAsync(serviceOne);
-            //var serviceTwo = "https://localhost:44306/letters";
-            var serviceTwo = "http://servicetwo/letters";
+            var serviceTwo = "http://letters-service:7992/letters";
             var serviceTwoResponseCall = await new HttpClient().GetStringAsync(serviceTwo);
             var mergedResponse = $"{serviceOneResponseCall}{serviceTwoResponseCall}";
             return Ok(mergedResponse);

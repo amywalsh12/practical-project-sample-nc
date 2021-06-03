@@ -21,8 +21,7 @@ namespace frontend.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //var serviceThree = "http://servicethree/merge";
-            var serviceThree = "https://localhost:44361/merge";
+            var serviceThree = "http://merge-service:7993/merge";
             var serviceThreeResponseCall = await new HttpClient().GetStringAsync(serviceThree);
             return View(serviceThreeResponseCall);
         }
