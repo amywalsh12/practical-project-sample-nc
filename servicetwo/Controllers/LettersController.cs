@@ -17,7 +17,7 @@ namespace serviceone.Controllers
         };
 
         [HttpGet]
-        public int Get()
+        public char Get()
         {
             var rnd = new Random();
             var returnIndex = rnd.Next(0, 25);
