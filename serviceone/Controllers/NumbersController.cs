@@ -17,11 +17,11 @@ namespace serviceone.Controllers
         };
 
         [HttpGet]
-        public int Get()
+        public ActionResult<string> Get()
         {
             var rnd = new Random();
             var returnIndex = rnd.Next(0, 9);
-            return Numbers[returnIndex];
+            return Numbers[returnIndex].ToString();
         }
     }
 }

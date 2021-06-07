@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace servicethree.Controllers
 {
@@ -21,9 +22,9 @@ namespace servicethree.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var numbersService = $"https://{Configuration["numbersServiceURL"]}/numbers";
+            var numbersService = $"{Configuration["numbersServiceURL"]}/numbers";
             var serviceOneResponseCall = await new HttpClient().GetStringAsync(numbersService);
-            var lettersService = $"https://{Configuration["lettersServiceURL"]}/letters";
+            var lettersService = $"{Configuration["lettersServiceURL"]}/letters";
             var serviceTwoResponseCall = await new HttpClient().GetStringAsync(lettersService);
             var mergedResponse = $"{serviceOneResponseCall}{serviceTwoResponseCall}";
             return Ok(mergedResponse);

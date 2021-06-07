@@ -49,7 +49,7 @@ namespace serviceone
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "serviceone v1");
                 c.RoutePrefix = string.Empty;
             });
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
