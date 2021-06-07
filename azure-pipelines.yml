@@ -24,7 +24,7 @@ stages:
         - task: DotNetCoreCLI@2
           inputs:
             command: 'build'
-            projects: 'serviceone/serviceone.csproj'
+            projects: './serviceone/serviceone.csproj'
             arguments: '--configuration $(BuildConfiguration)'
         - task: DotNetCoreCLI@2
           inputs:
