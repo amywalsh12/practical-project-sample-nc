@@ -20,10 +20,11 @@ stages:
             command: 'restore'
             projects: '**/*.csproj'
             feedsToUse: 'select'
+        
         - task: DotNetCoreCLI@2
           inputs:
             command: 'build'
-            projects: '**/serviceone.csproj'
+            projects: 'serviceone/serviceone.csproj'
             arguments: '--configuration $(BuildConfiguration)'
         - task: DotNetCoreCLI@2
           inputs:
