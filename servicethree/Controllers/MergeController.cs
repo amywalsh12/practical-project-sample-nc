@@ -21,11 +21,9 @@ namespace servicethree.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            // var numbersService = $"https://{Configuration["numbersServiceURL"]}/numbers";
-            var numbersService = $"http://numbers-service:81/numbers";
+            var numbersService = $"https://{Configuration["numbersServiceURL"]}/numbers";
             var serviceOneResponseCall = await new HttpClient().GetStringAsync(numbersService);
-            // var lettersService = $"https://{Configuration["lettersServiceURL"]}/letters";
-            var lettersService = $"http://letters-service:82/letters";
+            var lettersService = $"https://{Configuration["lettersServiceURL"]}/letters";
             var serviceTwoResponseCall = await new HttpClient().GetStringAsync(lettersService);
             var mergedResponse = $"{serviceOneResponseCall}{serviceTwoResponseCall}";
             return Ok(mergedResponse);
