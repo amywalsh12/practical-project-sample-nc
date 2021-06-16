@@ -5,7 +5,7 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: gwl-numbers
-  AZURE_WEBAPP_PACKAGE_PATH: code/serviceone/published
+  AZURE_WEBAPP_PACKAGE_PATH: serviceone/published
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.GWL_NUMBERS_FFFF }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x

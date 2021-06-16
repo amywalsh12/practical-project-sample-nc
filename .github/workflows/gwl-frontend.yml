@@ -5,7 +5,7 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: gwl-frontend
-  AZURE_WEBAPP_PACKAGE_PATH: code/servicethree/published
+  AZURE_WEBAPP_PACKAGE_PATH: servicethree/published
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.GWL_FRONTEND_FFFF }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
