@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Moq;
-using serviceone;
-using serviceone.Controllers;
 using servicethree;
 using servicethree.Controllers;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace services.tests.serviceone
@@ -17,8 +12,8 @@ namespace services.tests.serviceone
 
         private AppSettings appSettings = new AppSettings()
         {
-            numbersServiceURL= "https://gwl-numbers.azurewebsites.net",
-            lettersServiceURL= "https://gwl-letters.azurewebsites.net"
+            numbersServiceURL = "https://gwl-numbers.azurewebsites.net",
+            lettersServiceURL = "https://gwl-letters.azurewebsites.net"
         };
         [Fact]
         public async void GetTest()
@@ -29,8 +24,8 @@ namespace services.tests.serviceone
             MergeController mergeController = new MergeController(options.Object);
             var mergeContollerResult = await mergeController.Get();
 
-            //Assert.NotNull(mergeContollerResult);
-            //Assert.IsType<Task<IActionResult>>(mergeContollerResult);
+            Assert.NotNull(mergeContollerResult);
+            Assert.IsType<OkObjectResult>(mergeContollerResult);
         }
     }
 }
