@@ -1,19 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using Moq;
+using serviceone;
 using serviceone.Controllers;
+using servicethree;
+using servicethree.Controllers;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace services.tests.serviceone
 {
     public class serviceThreeTest
     {
-        [Fact]
-        public void GetTest()
-        {
-            NumbersController numbersController = new NumbersController();
-            var numbersContollerResult = numbersController.Get();
 
-            Assert.NotNull(numbersContollerResult);
-            Assert.IsType<ActionResult<string>>(numbersContollerResult);
+        private AppSettings appSettings = new AppSettings()
+        {
+            numbersServiceURL= "https://gwl-numbers.azurewebsites.net",
+            lettersServiceURL= "https://gwl-letters.azurewebsites.net"
+        };
+        [Fact]
+        public async void GetTest()
+        {
+            var options = new Mock<IOptions<AppSettings>>();
+            options.Setup(x => x.Value).Returns(appSettings);
+
+            MergeController mergeController = new MergeController(options.Object);
+            var mergeContollerResult = await mergeController.Get();
+
+            //Assert.NotNull(mergeContollerResult);
+            //Assert.IsType<Task<IActionResult>>(mergeContollerResult);
         }
     }
 }
