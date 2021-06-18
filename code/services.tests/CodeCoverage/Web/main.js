@@ -241,23 +241,17 @@ var assemblies = [
     "name": "serviceone",
     "classes": [
       { "name": "serviceone.Controllers.NumbersController", "rp": "serviceone_NumbersController.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "serviceone.Program", "rp": "serviceone_Program.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "serviceone.Startup", "rp": "serviceone_Startup.html", "cl": 0, "ucl": 32, "cal": 32, "tl": 64, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "servicethree",
     "classes": [
       { "name": "servicethree.AppSettings", "rp": "servicethree_AppSettings.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "servicethree.Controllers.MergeController", "rp": "servicethree_MergeController.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 28, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "servicethree.Program", "rp": "servicethree_Program.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "servicethree.Startup", "rp": "servicethree_Startup.html", "cl": 0, "ucl": 38, "cal": 38, "tl": 71, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
   {
     "name": "servicetwo",
     "classes": [
       { "name": "serviceone.Controllers.LettersController", "rp": "servicetwo_LettersController.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 27, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "servicetwo.Program", "rp": "servicetwo_Program.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "servicetwo.Startup", "rp": "servicetwo_Startup.html", "cl": 0, "ucl": 32, "cal": 32, "tl": 64, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 
