@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "servicethree", "servicethre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontend", "frontend\frontend.csproj", "{C513540B-A30C-49F3-9722-6058D7E499B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "services.tests", "services.tests\services.tests.csproj", "{3A421635-2F1A-4D6C-9872-09890C211211}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "services.tests", "tests\services.tests.csproj", "{3A421635-2F1A-4D6C-9872-09890C211211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
