@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test
-        run: dotnet test "${{ env.TEST_DIRECTORY }}" --no-build
+        run: dotnet test "${{ env.TEST_DIRECTORY }}" /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
 
   build-numbers-service:
     runs-on: ubuntu-latest
