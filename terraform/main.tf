@@ -15,22 +15,22 @@ variable "services" {
   type        = map
   default     = {
     frontend = {
-      name="front-end-project"
+      name="gwl-frontend"
     },
     serviceone = {
-      name="letters-project"
+      name="gwl-letters"
     },
     servicetwo = {
-      name="numbers-project"
+      name="gwl-numbers"
     },
     servicethree = {
-      name="merge-project"
+      name="gwl-merge"
     },
   }
 }
 
 resource "azurerm_resource_group" "rg" {
-    name     = "practical-project"
+    name     = "gwl-tf-rg"
     location = "uksouth"
 }
 resource "azurerm_app_service_plan" "app-service-plan" {
@@ -40,8 +40,8 @@ resource "azurerm_app_service_plan" "app-service-plan" {
   kind = "Linux"
   reserved = true
   sku {
-    tier = "Free"
-    size = "F1"
+    tier = "Basic"
+    size = "B1"
   }
 }
 resource "azurerm_app_service" "webapp" {
@@ -52,3 +52,4 @@ resource "azurerm_app_service" "webapp" {
     location = azurerm_resource_group.rg.location
     app_service_plan_id = azurerm_app_service_plan.app-service-plan.id
 }
+
