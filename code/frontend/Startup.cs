@@ -14,7 +14,7 @@ namespace frontend
 {
     [ExcludeFromCodeCoverage]
     public class Startup
-        //comment
+        
 
     {
         public Startup(IConfiguration configuration)
