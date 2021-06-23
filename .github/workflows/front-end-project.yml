@@ -5,11 +5,11 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: front-end-project
-  AZURE_WEBAPP_PACKAGE_PATH: .code/servicetwo/publish
+  AZURE_WEBAPP_PACKAGE_PATH: .code/frontend/publish
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.front_end_project_2ad8 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
-  WORKING_DIRECTORY: ./code/servicetwo
+  WORKING_DIRECTORY: ./code/frontend
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
