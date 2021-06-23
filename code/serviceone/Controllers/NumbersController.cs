@@ -20,8 +20,10 @@ namespace serviceone.Controllers
         public ActionResult<string> Get()
         {
             var rnd = new Random();
-            var returnIndex = rnd.Next(0, 9);
+            var returnIndex = rnd.Next(000000, 999999);
             return Numbers[returnIndex].ToString();
+
+
         }
     }
 }
