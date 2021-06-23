@@ -12,7 +12,7 @@ env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
   NUMBERS_DIRECTORY: ./code/serviceone
-  NUMBERS_AZURE_WEBAPP_PACKAGE_PATH: ./code/servicetwo/published
+  NUMBERS_AZURE_WEBAPP_PACKAGE_PATH: ./code/serviceone/published
   LETTERS_DIRECTORY: ./code/servicetwo
   LETTERS_AZURE_WEBAPP_PACKAGE_PATH: ./code/servicetwo/published
   MERGE_DIRECTORY: ./code/servicethree
@@ -21,6 +21,8 @@ env:
   FE_AZURE_WEBAPP_PACKAGE_PATH: ./code/frontend/published
   TEST_DIRECTORY: ./code/tests
 
+
+  TEST_DIRECTORY: ./code/tests
 jobs:
 
   test:
@@ -55,4 +57,3 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-          
