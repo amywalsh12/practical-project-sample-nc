@@ -17,9 +17,11 @@ namespace frontend
         
 
     {
-        //commnet to show the github actions at work 
-        public Startup(IConfiguration configuration)
+      //demo to show github actions working 
+
+          public Startup(IConfiguration configuration)
         {
+
             Configuration = configuration;
         }
 
